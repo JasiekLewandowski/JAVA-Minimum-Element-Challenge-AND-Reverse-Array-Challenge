@@ -44,7 +44,7 @@ public class Main {
         return minNumber;
     }
 
-    //METHOD REVERS NUMBERS IN ARRAY
+    //METHOD REVERSES NUMBERS IN ARRAY
     public static int[] reverseArray(int[] array){
         for (int i = 0; i < array.length/2; i ++){
             int number = array[i];
