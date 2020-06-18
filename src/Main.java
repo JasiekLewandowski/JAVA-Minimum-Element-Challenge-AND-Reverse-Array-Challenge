@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -15,7 +16,10 @@ public class Main {
 
         //Program finds minimum value in array:
         System.out.println("Minimum value in this array is: " + findMin(array));
-        
+
+        //Reversing array:
+        int[] reversedArray = reverseArray(array);
+        System.out.println("Reversed array is: " + Arrays.toString(reversedArray));
     }
 
 
@@ -38,5 +42,15 @@ public class Main {
                 minNumber = array [i];
         }
         return minNumber;
+    }
+
+    //METHOD REVERS NUMBERS IN ARRAY
+    public static int[] reverseArray(int[] array){
+        for (int i = 0; i < array.length/2; i ++){
+            int number = array[i];
+            array[i] = array [(array.length -1) - i];
+            array [(array.length) - 1 - i] = number;
+        }
+        return array;
     }
 }
